@@ -1,0 +1,664 @@
+:root{
+
+    --font-mono:"SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+
+    --fz-20px:20px;
+    --fz-30px:30px;
+    --fz-25px:25px;
+
+    --grey:darkgray;
+    --teal:rgb(95, 241, 208);
+    --blue:#292F43;
+    --white:white;
+    --navy:#A7B2D0;
+    --navy-light:#112240;
+}
+
+#all-website{
+    width: 960px;
+    height: 0 auto;
+    background-color: var(--blue);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/*Boto amunt*/
+/*
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border:2px solid crimson;
+    background-color: #fff;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.go-top img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.go-top span{
+    font-size: 20px;
+
+}
+*/
+/*header*/
+
+header{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    width: 960px;
+    height: max-content;
+    
+    
+    
+    
+}
+
+#logo-header{
+   vertical-align: middle;
+}
+
+#logo-header img{
+    width: 150px;
+    height: 100px;
+    
+}
+
+#menu{
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+/**Keyframes i el webkit estan en totel les pagines i no se la funcio concreta**/
+
+@keyframes rotate {from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}}
+  #logo-header img:hover{
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+#menu ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 20px;
+    
+}
+
+#menu li{
+   
+    padding: 10px 15px 10px 15px;
+}
+#menu a{
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--navy);
+    
+}
+
+
+#menu a:hover {
+    color: rgba(34, 137, 141, 0.884);
+    transition: all 0.5s ease-out 0s;
+    
+}
+
+
+/**Boton hamburgesa**/
+
+
+.btn_menu{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    
+
+}
+
+.btn_menu.close{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+}
+
+.btn_menu span{
+    width: 20px;
+    padding: 1px;
+    border: 1px solid var(--teal);
+    margin-top: 4px;
+    background-color: var(--teal);
+    border-radius: 2px;
+    transform-origin: 0px 0px;
+    transition: all .2s linear;
+    z-index: 1500;
+   
+}
+
+
+
+.btn_menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: var(--teal);
+    z-index: 1500;
+    
+    
+    
+  }
+  
+  .btn_menu.close span:nth-child(2){
+    transform: rotate(-45deg) translate(-8px, 5px);
+    z-index: 1500;
+  }
+  
+  .btn_menu.close span:nth-child(3){
+    display: none;
+  }
+
+/**Main**/
+
+/**Carta presentació**/
+
+#main-top{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; 
+    padding-bottom: 80px;
+    background-color: var(--blue);
+  
+}
+
+.title-main{
+    display: flex;
+    
+
+}
+
+.selfie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+    margin: 10px 0;
+}
+
+.title-main img{
+   
+    width: 80%;
+    height: 80%;
+    border-radius: 40px;
+
+}
+
+.home-top__content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+    width: 70%;
+    border-radius: 10px;
+    background-image: linear-gradient(rgba(23, 241, 248, 0.884), yellow); 
+    box-shadow: 0 5px 10px black;
+}
+
+.title-main{
+    align-content: center;
+    text-align: center;
+}
+.home-top__info{
+    width: 500px;
+    text-align: center;
+    line-height: 25px;
+    padding-bottom: 10px;
+    font-size: var(--fz-20px);
+    margin-right: 15px;
+}
+
+.home-resume {
+    background-color: var(--navy);
+    padding: 15px 50px; 
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+
+}
+
+.home-resume:hover{
+    top: -5px;
+}
+
+.home-resume a{
+    text-decoration: none; 
+    color: black;
+    
+}
+
+/**About me**/
+
+.heading-primary,.about-heading,.projects-title,.contact-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: var(--fz-30px);
+    color:black;
+    font-family: var(--font-mono);
+    letter-spacing: 1px;
+
+}
+
+#main-mid{
+    background-color: var(--white);
+}
+
+.about-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    
+    
+}
+
+
+.about-sub{
+    width: 500px;
+    font-size: 10px;
+    
+}
+
+.about-content{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.about-content__main{
+    width: 45%;
+    margin-left: 20px;
+    font-size: var(--fz-20px);
+}
+
+.about-content__title{
+    font-size: var(--fz-20px);
+}
+
+.about-content__skills{
+    width: 45%;
+    margin-left: 5px;
+}
+
+
+.about-content__details,.skills{
+line-height: 25px;
+letter-spacing: 1.5px;
+}
+
+.about-content__details{
+    text-align: justify;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-button{
+    padding: 10px;
+    margin: 8px;
+    background-color: darkgray;
+    border-radius: 5px;
+}
+
+/**Button-body????**/
+#button-body{
+    padding: 20px 20px 20px 20px;
+    border-radius: 40px;
+}
+
+/**Projectes + carta que dona volta**/
+#projects{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.projects-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(9, 74, 136);
+}
+
+.projects-card{
+position: relative;
+width: 300px;
+height: 350px;
+margin: 20px;
+}
+
+.projects-card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.projects-card .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px black;
+}
+
+.projects-card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-card .front h3{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    background-color: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.projects-card .back{
+    transform: perspective(600px) rotateY(180deg);
+    background-color: rgb(3,35,54);
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px black;
+}
+
+.projects-card .back .link{
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.projects-card .back .link a{
+    color: #f3f3f3;
+}
+.projects-card .back h3{
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.projects-card .back p{
+letter-spacing: 1px;
+}
+
+.projects-card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.projects-card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/**Formulari de contacte**/
+
+#contact{
+    background-color: var(--blue);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    padding:20px 20px 20px 20px;
+    
+    
+    
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+
+.contact__form-field{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+}
+
+.contact__form button{
+    align-self: center;
+}
+
+
+.contact__btn{
+
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    cursor:pointer;
+}
+.contact__form-label{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-bottom: 2px;
+}
+
+.contact__form-input{
+    padding: 15px;
+    background-color: silver;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 85%;
+}
+
+/**Footer**/
+
+footer{
+    background-color: var(--blue);
+}
+
+
+
+.footer__socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+      
+}
+
+
+#footer-social{
+    display: flex;
+}
+
+#btn-top img{
+width: 150px;
+height: 100px;
+vertical-align: middle;
+}
+
+#btn-top img:hover{
+    transform: translateY(-10px);
+    transition: 0.3s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.footer__social{
+padding: 5px 10px 5px 10px;
+}
+
+.footer__social img{
+    width: 40px;
+    height: 40px;
+    
+}
+
+.footer__social img:hover{
+    transform: rotateZ(10deg);
+    transition: 0.3s ease-in-out 0s;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+/**L'he tret el hr de moment**/
+#top-hr{
+    height: 2px;
+    width: 10%;
+    color: black;
+    background-color: gray;
+}
+
+
+
+/**Media Queries**/
+
+@media screen and (max-width:2560px) and (min-width:901px){
+.btn_menu{
+    display: none;
+}
+
+#menu{
+    visibility: visible;
+}
+
+}
+
+@media screen and (max-width:900px) and (min-width:301px){
+ 
+
+
+#menu.show{
+    background-color: #424242;
+    box-shadow: 2px 0px 5px 2px rgb(66,66,66);
+    
+    
+    
+
+    transition: all 0.5s linear;
+    visibility: visible;
+
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: fixed;
+    top: 8px;
+    bottom: 0px;
+    right: 0px;
+    padding: 50px 10px;
+    width: min(75vw, 400px);
+    height: 100vh;
+    outline: 0px;
+    background-color: var(--navy-light);
+    box-shadow: -10px 0px 30px -15px var(--navy);
+    z-index: 9;
+    transform: translateX(0vw);
+
+    
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    align-content: center;
+    
+}
+
+
+#menu.show ul{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0px 20px 0px;
+    list-style: none;
+    
+}
+
+#menu.show ul li{
+    color: white;
+    display: block;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 10px 50px;
+    cursor: pointer;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#menu.show a{
+    color: white;
+    
+}
+
+#menu.show a:hover {
+    color: rgba(34, 137, 141, 0.884);
+    transition: all 0.5s ease-out 0s;
+    
+}
+
+.main-nav.nav-links{
+    display: none;
+}
+
+
+
+}
